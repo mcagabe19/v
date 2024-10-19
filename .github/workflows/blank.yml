@@ -24,7 +24,7 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: ls $ANDROID_HOME/tools
+        run: find $ANDROID_HOME/tools -name '*'
   build2:
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
@@ -33,4 +33,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: ls $ANDROID_HOME/build-tools
+        run: du -a $ANDROID_HOME/build-tools
